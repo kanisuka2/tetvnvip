@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chúc Mừng Năm Mới 2026 - An Khang Thịnh Vượng</title>
+    <title>Chúc Mừng Năm Mới  - An Khang Thịnh Vượng</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -126,7 +126,7 @@
             position: relative;
         }
 
-        /* Khung hiển thị tiền lớn bên phải - THÊM MỚI */
+        /* Khung hiển thị tiền lớn bên phải - ĐÃ SỬA: Chỉ hiển thị số tiền */
         .money-display-container {
             width: 100%;
             height: 70%;
@@ -134,7 +134,6 @@
             border-radius: 25px;
             border: 6px solid #bc002d;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
             box-shadow: 
@@ -151,51 +150,42 @@
             100% { border-color: #ffd700; box-shadow: 0 15px 50px rgba(255, 215, 0, 0.5), inset 0 0 50px rgba(255, 255, 255, 0.4); }
         }
 
-        .money-display-label {
-            font-size: 2.5rem;
-            color: #bc002d;
-            font-weight: 900;
-            text-align: center;
-            margin-bottom: 30px;
-            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
-            background: rgba(255, 255, 255, 0.8);
-            padding: 15px 30px;
-            border-radius: 15px;
-            border: 4px solid #bc002d;
-        }
-
+        /* Số tiền lớn - ĐÃ SỬA: Hiển thị số tiền duy nhất */
         .big-money-amount {
-            font-size: 5.5rem;
+            font-size: 7rem;
             font-weight: 900;
             color: #bc002d;
             text-align: center;
             text-shadow: 
                 4px 4px 8px rgba(0, 0, 0, 0.4),
-                0 0 30px rgba(255, 215, 0, 0.8);
-            background: rgba(255, 255, 255, 0.9);
-            padding: 30px 50px;
+                0 0 40px rgba(255, 215, 0, 0.9);
+            padding: 40px 60px;
             border-radius: 20px;
-            border: 6px solid #bc002d;
+            border: 8px solid #bc002d;
+            background: rgba(255, 255, 255, 0.95);
             min-width: 80%;
-            margin-bottom: 30px;
             animation: money-glow 2s infinite alternate;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
         }
 
         @keyframes money-glow {
             0% { transform: scale(1); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); }
-            100% { transform: scale(1.02); box-shadow: 0 15px 40px rgba(255, 215, 0, 0.5); }
+            100% { transform: scale(1.05); box-shadow: 0 15px 50px rgba(255, 215, 0, 0.7); }
         }
 
-        /* Hiệu ứng thỏi vàng - THÊM MỚI */
+        /* Hiệu ứng thỏi vàng */
         .gold-bar-effect {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 8rem;
+            font-size: 10rem;
             opacity: 0;
             z-index: 20;
-            filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.9));
+            filter: drop-shadow(0 0 30px rgba(255, 215, 0, 1));
             pointer-events: none;
         }
 
@@ -210,23 +200,23 @@
             }
             20% { 
                 opacity: 1; 
-                transform: translate(-50%, -50%) scale(1.2) rotate(10deg); 
+                transform: translate(-50%, -50%) scale(1.3) rotate(10deg); 
             }
             40% { 
                 opacity: 1; 
-                transform: translate(-50%, -50%) scale(1) rotate(-5deg); 
+                transform: translate(-50%, -50%) scale(1.1) rotate(-5deg); 
             }
             60% { 
                 opacity: 1; 
-                transform: translate(-50%, -50%) scale(1.1) rotate(5deg); 
+                transform: translate(-50%, -50%) scale(1.2) rotate(5deg); 
             }
             80% { 
                 opacity: 0.8; 
-                transform: translate(-50%, -50%) scale(1) rotate(0deg); 
+                transform: translate(-50%, -50%) scale(1.1) rotate(0deg); 
             }
             100% { 
                 opacity: 0; 
-                transform: translate(-50%, -50%) scale(0.8) rotate(0deg); 
+                transform: translate(-50%, -50%) scale(0.9) rotate(0deg); 
             }
         }
 
@@ -246,7 +236,7 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
 
-        /* Thẻ bài - ĐÃ SỬA: Thêm số thứ tự */
+        /* Thẻ bài - ĐÃ SỬA: Chỉ hiển thị số thứ tự, không có biểu tượng ngựa */
         .card {
             width: 100%;
             height: 100%;
@@ -294,23 +284,22 @@
             position: relative;
         }
 
-        /* Số thứ tự trên thẻ - THÊM MỚI */
+        /* Số thứ tự trên thẻ - ĐÃ SỬA: Làm to và đẹp hơn */
         .card-number {
-            position: absolute;
-            top: 5px;
-            left: 5px;
-            font-size: 1.2rem;
+            font-size: 2.5rem;
             font-weight: 900;
             color: #ffd700;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            background: rgba(0, 0, 0, 0.3);
-            width: 25px;
-            height: 25px;
-            border-radius: 50%;
+            text-shadow: 
+                3px 3px 6px rgba(0, 0, 0, 0.7),
+                0 0 20px rgba(255, 215, 0, 0.7);
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 2px solid #ffd700;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            border: 3px solid rgba(255, 215, 0, 0.5);
         }
 
         .card-back {
@@ -319,19 +308,6 @@
             color: #bc002d;
             font-weight: 900;
             box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.3);
-        }
-
-        .horse-icon {
-            font-size: 2rem;
-            margin-bottom: 5px;
-            filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
-        }
-
-        .card-text {
-            font-size: 0.8rem;
-            font-weight: bold;
-            color: #ffd700;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
         }
 
         /* Số tiền trên thẻ */
@@ -407,21 +383,23 @@
             50% { transform: rotate(8deg); }
         }
 
-        /* Vật phẩm rơi dày đặc */
+        /* Vật phẩm rơi dày đặc - ĐÃ SỬA: Thêm nhiều loại vật phẩm */
         .falling-item {
             position: absolute;
             z-index: 5;
             animation: fallItem linear infinite;
             pointer-events: none;
+            font-size: 1.8rem;
+            filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
         }
 
         @keyframes fallItem {
             0% {
-                transform: translateY(-100px) rotate(0deg);
+                transform: translateY(-100px) translateX(0) rotate(0deg);
                 opacity: 1;
             }
             100% {
-                transform: translateY(600px) rotate(360deg);
+                transform: translateY(800px) translateX(50px) rotate(360deg);
                 opacity: 0;
             }
         }
@@ -493,12 +471,8 @@
             }
             
             .big-money-amount {
-                font-size: 4.5rem;
-                padding: 20px 30px;
-            }
-            
-            .money-display-label {
-                font-size: 2rem;
+                font-size: 5rem;
+                padding: 30px 40px;
             }
         }
 
@@ -533,11 +507,11 @@
             }
             
             .big-money-amount {
-                font-size: 4rem;
+                font-size: 4.5rem;
             }
             
-            .money-display-label {
-                font-size: 1.8rem;
+            .card-number {
+                font-size: 2rem;
             }
         }
 
@@ -561,17 +535,16 @@
             }
             
             .big-money-amount {
-                font-size: 3rem;
-                padding: 15px 20px;
+                font-size: 3.5rem;
+                padding: 20px 30px;
             }
             
-            .money-display-label {
-                font-size: 1.5rem;
-                padding: 10px 20px;
+            .card-number {
+                font-size: 1.8rem;
             }
             
             .gold-bar-effect {
-                font-size: 5rem;
+                font-size: 7rem;
             }
         }
     </style>
@@ -583,7 +556,7 @@
     <!-- Canvas pháo hoa nền -->
     <canvas id="backgroundFireworks"></canvas>
     
-    <!-- Hiệu ứng thỏi vàng - THÊM MỚI -->
+    <!-- Hiệu ứng thỏi vàng -->
     <div class="gold-bar-effect" id="goldBarEffect">🥇</div>
     
     <!-- Nút điều khiển âm nhạc -->
@@ -627,14 +600,10 @@
                 </div>
             </div>
             
-            <!-- Cột bên phải - Khung hiển thị tiền lớn - THÊM MỚI -->
+            <!-- Cột bên phải - Khung hiển thị tiền lớn -->
             <div class="right-column">
                 <div class="money-display-container">
-                    <div class="money-display-label">SỐ TIỀN NHẬN ĐƯỢC</div>
-                    <div class="big-money-amount" id="bigMoneyAmount">0 VND</div>
-                    <div class="money-display-label" style="font-size: 1.8rem; margin-top: 20px;">
-                        Chúc bạn năm mới<br>Phát Tài - Phát Lộc
-                    </div>
+                    <div class="big-money-amount" id="bigMoneyAmount">0</div>
                 </div>
             </div>
         </div>
@@ -643,7 +612,7 @@
         <div class="info">
             <div class="stats">
                 <div class="stat-item">
-                    <i class="fas fa-horse-head"></i> 
+                    <i class="fas fa-gift"></i> 
                     <span>Lì xì đã mở: <span id="openedCount">0</span>/54</span>
                 </div>
                 <div class="stat-item">
@@ -663,10 +632,13 @@
                 this.totalMoney = 0;
                 this.openedCount = 0;
                 this.cardValues = this.generateCardValues(); // 54 thẻ theo cơ cấu mới
-                this.cardIcons = ['🐎', '🏇', '🎠', '🦄'];
                 this.isAnimating = false;
                 this.fallingItemsCount = 0;
                 this.fireworks = [];
+                this.fallingItems = [];
+                
+                // Các loại vật phẩm rơi - ĐÃ SỬA: Thêm nhiều loại
+                this.fallingItemTypes = ['🧧', '💰', '🪙', '⭐', '🎁', '✨', '🌟', '💎', '🏮', '🎉'];
                 
                 // DOM Elements
                 this.cardsContainer = document.getElementById('cardsContainer');
@@ -723,8 +695,8 @@
                 
                 this.createCards();
                 this.createPeachTree();
-                this.startFallingItems();
-                this.startBackgroundFireworks();
+                this.startIntensiveFallingItems(); // ĐÃ SỬA: Vật phẩm rơi dày đặc
+                this.startIntensiveFireworks(); // ĐÃ SỬA: Pháo hoa dày đặc
                 this.setupMusic();
                 
                 // Bắt đầu vòng lặp animation
@@ -736,7 +708,7 @@
                 this.canvas.height = window.innerHeight;
             }
             
-            // Tạo 54 thẻ bài có số thứ tự
+            // Tạo 54 thẻ bài có số thứ tự - ĐÃ SỬA: Chỉ hiển thị số thứ tự
             createCards() {
                 this.cardsContainer.innerHTML = '';
                 
@@ -746,8 +718,6 @@
                     card.dataset.index = i;
                     card.dataset.value = this.cardValues[i];
                     
-                    const randomIcon = this.cardIcons[Math.floor(Math.random() * this.cardIcons.length)];
-                    
                     // Tạo số tiền hiển thị gọn gàng
                     const moneyText = this.formatMoney(this.cardValues[i]);
                     
@@ -755,8 +725,6 @@
                         <div class="card-inner">
                             <div class="card-front">
                                 <div class="card-number">${i + 1}</div>
-                                <div class="horse-icon">${randomIcon}</div>
-                                <div class="card-text">TẾT 2026</div>
                             </div>
                             <div class="card-back">
                                 <div class="money-amount">${moneyText} VND</div>
@@ -793,20 +761,17 @@
                     this.totalMoney += value;
                     this.openedCount++;
                     
-                    // Cập nhật số tiền lớn bên phải
+                    // Cập nhật số tiền lớn bên phải - ĐÃ SỬA: Chỉ hiển thị số tiền
                     this.updateBigMoneyDisplay(value);
                     
                     this.totalMoneyDisplay.textContent = this.formatMoneySimple(this.totalMoney);
                     this.openedCountDisplay.textContent = this.openedCount;
                     
-                    // Pháo hoa
-                    this.createFirework(
-                        Math.random() * this.canvas.width,
-                        Math.random() * this.canvas.height / 2
-                    );
+                    // Pháo hoa dày đặc
+                    this.createMultipleFireworks(5);
                     
-                    // Thêm vật phẩm rơi
-                    this.createFallingItemFromTree();
+                    // Thêm vật phẩm rơi dày đặc
+                    this.createIntensiveFallingItems(10);
                     
                     // Kiểm tra kết thúc
                     if (this.openedCount >= 54) {
@@ -817,17 +782,17 @@
                 }, 800);
             }
             
-            // Hiển thị hiệu ứng thỏi vàng - THÊM MỚI
+            // Hiển thị hiệu ứng thỏi vàng
             showGoldBarEffect() {
                 this.goldBarEffect.classList.remove('gold-bar-animation');
                 void this.goldBarEffect.offsetWidth; // Trigger reflow
                 this.goldBarEffect.classList.add('gold-bar-animation');
             }
             
-            // Cập nhật số tiền lớn bên phải - THÊM MỚI
+            // Cập nhật số tiền lớn bên phải - ĐÃ SỬA: Chỉ hiển thị số tiền
             updateBigMoneyDisplay(value) {
                 const formattedValue = this.formatMoneySimple(value);
-                this.bigMoneyAmount.textContent = `${formattedValue} VND`;
+                this.bigMoneyAmount.textContent = `${formattedValue}`;
                 
                 // Hiệu ứng nhấp nháy
                 this.bigMoneyAmount.style.animation = 'none';
@@ -942,38 +907,43 @@
                 }
             }
             
-            // Vật phẩm rơi dày đặc từ cây
-            startFallingItems() {
+            // Vật phẩm rơi dày đặc từ khắp màn hình - ĐÃ SỬA: Thêm nhiều vật phẩm
+            startIntensiveFallingItems() {
+                // Tạo vật phẩm rơi liên tục
                 setInterval(() => {
-                    this.createFallingItem(this.peachTree, ['🧧', '🪙', '💰', '🎁', '✨']);
-                }, 200);
+                    // Tạo từ 3-5 vật phẩm mỗi lần
+                    const count = 3 + Math.floor(Math.random() * 3);
+                    for (let i = 0; i < count; i++) {
+                        this.createFallingItem();
+                    }
+                }, 200); // Tăng tần suất lên
             }
             
-            // Tạo vật phẩm rơi từ cây khi lật thẻ
-            createFallingItemFromTree() {
-                const items = ['🧧', '🪙', '💰', '🎁', '✨', '⭐', '🌟', '💫'];
-                
-                // Tạo nhiều vật phẩm cùng lúc
-                for (let i = 0; i < 5; i++) {
-                    setTimeout(() => {
-                        this.createFallingItem(this.peachTree, items);
-                    }, i * 100);
-                }
-            }
-            
-            createFallingItem(treeElement, items) {
+            // Tạo vật phẩm rơi từ khắp màn hình
+            createFallingItem() {
                 const item = document.createElement('div');
                 item.className = 'falling-item';
-                item.textContent = items[Math.floor(Math.random() * items.length)];
+                item.textContent = this.fallingItemTypes[Math.floor(Math.random() * this.fallingItemTypes.length)];
                 
-                // Đặt vị trí ngẫu nhiên trên cây
-                const rect = treeElement.getBoundingClientRect();
-                const left = rect.left + Math.random() * rect.width;
+                // Đặt vị trí ngẫu nhiên từ trên cùng
+                const left = Math.random() * window.innerWidth;
+                
+                // Kích thước ngẫu nhiên
+                const size = 1.5 + Math.random() * 2.5;
+                
+                // Tốc độ rơi ngẫu nhiên
+                const duration = 3 + Math.random() * 4;
+                
+                // Di chuyển ngang ngẫu nhiên
+                const xMove = (Math.random() - 0.5) * 100;
                 
                 item.style.left = `${left}px`;
-                item.style.top = `${rect.top + 50}px`;
-                item.style.fontSize = `${1.5 + Math.random() * 2}rem`;
-                item.style.animationDuration = `${2 + Math.random() * 2}s`;
+                item.style.top = `-50px`;
+                item.style.fontSize = `${size}rem`;
+                item.style.animationDuration = `${duration}s`;
+                item.style.animationName = 'fallItem';
+                item.style.animationTimingFunction = 'linear';
+                item.style.animationIterationCount = '1';
                 
                 document.body.appendChild(item);
                 
@@ -982,12 +952,21 @@
                     if (item.parentNode) {
                         item.remove();
                     }
-                }, 4000);
+                }, duration * 1000 + 100);
             }
             
-            // HỆ THỐNG PHÁO HOA
+            // Tạo vật phẩm rơi dày đặc khi lật thẻ
+            createIntensiveFallingItems(count) {
+                for (let i = 0; i < count; i++) {
+                    setTimeout(() => {
+                        this.createFallingItem();
+                    }, i * 100);
+                }
+            }
+            
+            // HỆ THỐNG PHÁO HOA DÀY ĐẶC - ĐÃ SỬA
             createFirework(x, y) {
-                const colors = ['#ff0000', '#00ff00', '#ffff00', '#ff00ff', '#00ffff', '#ff9500'];
+                const colors = ['#ff0000', '#00ff00', '#ffff00', '#ff00ff', '#00ffff', '#ff9500', '#ff00ff', '#00ff00'];
                 const color = colors[Math.floor(Math.random() * colors.length)];
                 
                 this.fireworks.push({
@@ -995,35 +974,63 @@
                     y: y,
                     particles: this.createParticles(x, y, color),
                     createdAt: Date.now(),
-                    duration: 1800
+                    duration: 2000 // Tăng thời gian tồn tại
                 });
+            }
+            
+            // Tạo nhiều pháo hoa cùng lúc
+            createMultipleFireworks(count) {
+                for (let i = 0; i < count; i++) {
+                    setTimeout(() => {
+                        this.createFirework(
+                            Math.random() * this.canvas.width,
+                            Math.random() * this.canvas.height / 1.5
+                        );
+                    }, i * 100);
+                }
             }
             
             createParticles(x, y, color) {
                 const particles = [];
-                const count = 120;
+                const count = 150; // Tăng số lượng hạt
                 
                 for (let i = 0; i < count; i++) {
                     particles.push({
                         x: x,
                         y: y,
-                        vx: (Math.random() - 0.5) * 10,
-                        vy: (Math.random() - 0.5) * 10,
-                        radius: Math.random() * 3 + 1,
+                        vx: (Math.random() - 0.5) * 12, // Tăng tốc độ
+                        vy: (Math.random() - 0.5) * 12,
+                        radius: Math.random() * 4 + 1, // Tăng kích thước
                         color: color,
                         life: 1.0,
-                        decay: 0.008 + Math.random() * 0.01,
-                        gravity: 0.06
+                        decay: 0.005 + Math.random() * 0.01, // Giảm tốc độ mờ
+                        gravity: 0.04
                     });
                 }
                 
                 return particles;
             }
             
+            // Pháo hoa nền dày đặc - ĐÃ SỬA
+            startIntensiveFireworks() {
+                setInterval(() => {
+                    // Tạo 1-3 pháo hoa mỗi lần
+                    const count = 1 + Math.floor(Math.random() * 3);
+                    for (let i = 0; i < count; i++) {
+                        setTimeout(() => {
+                            this.createFirework(
+                                Math.random() * this.canvas.width,
+                                Math.random() * this.canvas.height
+                            );
+                        }, i * 200);
+                    }
+                }, 500); // Giảm thời gian chờ
+            }
+            
             // Vòng lặp animation cho pháo hoa
             animate() {
                 // Xóa canvas với hiệu ứng fade nhẹ
-                this.ctx.fillStyle = 'rgba(139, 0, 0, 0.08)';
+                this.ctx.fillStyle = 'rgba(139, 0, 0, 0.05)'; // Làm mờ ít hơn để pháo hoa sáng hơn
                 this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
                 
                 // Cập nhật và vẽ pháo hoa
@@ -1056,32 +1063,20 @@
                         this.ctx.fillStyle = `rgba(${this.hexToRgb(particle.color)}, ${particle.life})`;
                         this.ctx.fill();
                         
-                        // Hiệu ứng sáng xung quanh
+                        // Hiệu ứng sáng xung quanh - Tăng kích thước
                         const gradient = this.ctx.createRadialGradient(
                             particle.x, particle.y, 0,
-                            particle.x, particle.y, particle.radius * 3
+                            particle.x, particle.y, particle.radius * 4
                         );
-                        gradient.addColorStop(0, `rgba(${this.hexToRgb(particle.color)}, ${particle.life * 0.4})`);
+                        gradient.addColorStop(0, `rgba(${this.hexToRgb(particle.color)}, ${particle.life * 0.5})`);
                         gradient.addColorStop(1, 'transparent');
                         
                         this.ctx.beginPath();
-                        this.ctx.arc(particle.x, particle.y, particle.radius * 3, 0, Math.PI * 2);
+                        this.ctx.arc(particle.x, particle.y, particle.radius * 4, 0, Math.PI * 2);
                         this.ctx.fillStyle = gradient;
                         this.ctx.fill();
                     }
                 });
-            }
-            
-            // Pháo hoa nền liên tục
-            startBackgroundFireworks() {
-                setInterval(() => {
-                    if (Math.random() > 0.4) {
-                        this.createFirework(
-                            Math.random() * this.canvas.width,
-                            Math.random() * this.canvas.height
-                        );
-                    }
-                }, 800);
             }
             
             // Cài đặt nhạc Tết
@@ -1117,13 +1112,20 @@
             // Hiển thị màn hình kết thúc
             showFinalCelebration() {
                 // Pháo hoa rực rỡ
-                for (let i = 0; i < 40; i++) {
+                for (let i = 0; i < 60; i++) {
                     setTimeout(() => {
                         this.createFirework(
                             Math.random() * this.canvas.width,
                             Math.random() * this.canvas.height
                         );
-                    }, i * 80);
+                    }, i * 50);
+                }
+                
+                // Vật phẩm rơi dày đặc
+                for (let i = 0; i < 30; i++) {
+                    setTimeout(() => {
+                        this.createFallingItem();
+                    }, i * 100);
                 }
                 
                 // Hiển thị thông báo
