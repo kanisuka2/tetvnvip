@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc Mừng Năm Mới 2026 - An Khang Thịnh Vượng</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            overflow: hidden;
+            background: linear-gradient(135deg, #8b0000 0%, #bc002d 100%);
+            color: white;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        /* Hình nền với hiệu ứng pháo hoa */
+        .tet-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(255, 215, 0, 0.3) 0%, transparent 25%),
+                radial-gradient(circle at 80% 70%, rgba(255, 0, 0, 0.3) 0%, transparent 25%),
+                radial-gradient(circle at 40% 80%, rgba(255, 105, 180, 0.3) 0%, transparent 25%),
+                linear-gradient(135deg, #8b0000 0%, #bc002d 100%);
+            z-index: 1;
+        }
+
+        /* Canvas pháo hoa nền */
+        #backgroundFireworks {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        /* Container chính */
+        .container {
+            position: relative;
+            z-index: 10;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 20px 0 40px 0;
+        }
+
+        .title {
+            background: linear-gradient(to right, #ffd700, #ff9500, #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 40px rgba(255, 215, 0, 0.7);
+            animation: glow 2s infinite alternate;
+        }
+
+        .title h1 {
+            font-size: 4rem;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        .title p {
+            font-size: 2.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        @keyframes glow {
+            0% { text-shadow: 0 0 20px rgba(255, 215, 0, 0.7); }
+            100% { text-shadow: 0 0 40px rgba(255, 215, 0, 1), 0 0 60px rgba(255, 215, 0, 0.7); }
+        }
+
+        /* Nội dung chính - bố cục 3 cột */
+        .main-content {
+            display: flex;
+            flex: 1;
+            gap: 30px;
+            height: 70vh;
+        }
+
+        /* Cột bên trái - Cây đào đẹp */
+        .left-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            position: relative;
+        }
+
+        /* Cột giữa - 54 thẻ bài */
+        .center-column {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Cột bên phải - Khung hiển thị tiền lớn */
+        .right-column {
+            flex: 1.5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        /* Khung hiển thị tiền lớn bên phải - THÊM MỚI */
+        .money-display-container {
+            width: 100%;
+            height: 70%;
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.9), rgba(255, 165, 0, 0.9));
+            border-radius: 25px;
+            border: 6px solid #bc002d;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 
+                0 15px 40px rgba(0, 0, 0, 0.4),
+                inset 0 0 40px rgba(255, 255, 255, 0.3);
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+            animation: pulse-border 3s infinite alternate;
+        }
+
+        @keyframes pulse-border {
+            0% { border-color: #bc002d; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), inset 0 0 40px rgba(255, 255, 255, 0.3); }
+            100% { border-color: #ffd700; box-shadow: 0 15px 50px rgba(255, 215, 0, 0.5), inset 0 0 50px rgba(255, 255, 255, 0.4); }
+        }
+
+        .money-display-label {
+            font-size: 2.5rem;
+            color: #bc002d;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 30px;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+            background: rgba(255, 255, 255, 0.8);
+            padding: 15px 30px;
+            border-radius: 15px;
+            border: 4px solid #bc002d;
+        }
+
+        .big-money-amount {
+            font-size: 5.5rem;
+            font-weight: 900;
+            color: #bc002d;
+            text-align: center;
+            text-shadow: 
+                4px 4px 8px rgba(0, 0, 0, 0.4),
+                0 0 30px rgba(255, 215, 0, 0.8);
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px 50px;
+            border-radius: 20px;
+            border: 6px solid #bc002d;
+            min-width: 80%;
+            margin-bottom: 30px;
+            animation: money-glow 2s infinite alternate;
+        }
+
+        @keyframes money-glow {
+            0% { transform: scale(1); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); }
+            100% { transform: scale(1.02); box-shadow: 0 15px 40px rgba(255, 215, 0, 0.5); }
+        }
+
+        /* Hiệu ứng thỏi vàng - THÊM MỚI */
+        .gold-bar-effect {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 8rem;
+            opacity: 0;
+            z-index: 20;
+            filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.9));
+            pointer-events: none;
+        }
+
+        .gold-bar-animation {
+            animation: goldBarPop 1.5s ease-out forwards;
+        }
+
+        @keyframes goldBarPop {
+            0% { 
+                opacity: 0; 
+                transform: translate(-50%, -50%) scale(0.3) rotate(0deg); 
+            }
+            20% { 
+                opacity: 1; 
+                transform: translate(-50%, -50%) scale(1.2) rotate(10deg); 
+            }
+            40% { 
+                opacity: 1; 
+                transform: translate(-50%, -50%) scale(1) rotate(-5deg); 
+            }
+            60% { 
+                opacity: 1; 
+                transform: translate(-50%, -50%) scale(1.1) rotate(5deg); 
+            }
+            80% { 
+                opacity: 0.8; 
+                transform: translate(-50%, -50%) scale(1) rotate(0deg); 
+            }
+            100% { 
+                opacity: 0; 
+                transform: translate(-50%, -50%) scale(0.8) rotate(0deg); 
+            }
+        }
+
+        /* Cards container */
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(9, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+            gap: 12px;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 25px;
+            backdrop-filter: blur(15px);
+            border: 3px solid rgba(255, 215, 0, 0.4);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Thẻ bài - ĐÃ SỬA: Thêm số thứ tự */
+        .card {
+            width: 100%;
+            height: 100%;
+            perspective: 1000px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform-style: preserve-3d;
+            border-radius: 12px;
+        }
+
+        .card.flipped .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 8px;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .card-front {
+            background: linear-gradient(135deg, #bc002d, #8b0000);
+            border: 3px solid #ffd700;
+            box-shadow: 
+                inset 0 0 20px rgba(0, 0, 0, 0.2),
+                0 8px 20px rgba(0, 0, 0, 0.4);
+            position: relative;
+        }
+
+        /* Số thứ tự trên thẻ - THÊM MỚI */
+        .card-number {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            font-size: 1.2rem;
+            font-weight: 900;
+            color: #ffd700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.3);
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #ffd700;
+        }
+
+        .card-back {
+            background: linear-gradient(135deg, #ffd700, #ff9500);
+            transform: rotateY(180deg);
+            color: #bc002d;
+            font-weight: 900;
+            box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.3);
+        }
+
+        .horse-icon {
+            font-size: 2rem;
+            margin-bottom: 5px;
+            filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+        }
+
+        .card-text {
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: #ffd700;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Số tiền trên thẻ */
+        .money-amount {
+            font-size: 1.6rem;
+            font-weight: 900;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            padding: 6px 8px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            border: 2px solid #bc002d;
+            line-height: 1.1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            text-align: center;
+            box-sizing: border-box;
+            max-height: 90%;
+            word-break: break-word;
+        }
+
+        /* Container cây */
+        .tree-container {
+            width: 100%;
+            height: 120%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            margin-bottom: -20%;
+            transform: scale(1.2);
+            transform-origin: bottom center;
+        }
+
+        /* SVG Tree Styling */
+        .tree-svg {
+            width: 120%;
+            height: 120%;
+            filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.4));
+            animation: swayTree 8s ease-in-out infinite;
+            transform-origin: bottom center;
+        }
+
+        @keyframes swayTree {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(1deg); }
+            75% { transform: rotate(-1deg); }
+        }
+
+        /* Lì xì treo trên cây */
+        .tree-envelope {
+            position: absolute;
+            width: 60px;
+            height: 85px;
+            background: linear-gradient(135deg, #bc002d, #8b0000);
+            border: 3px solid #ffd700;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffd700;
+            font-weight: bold;
+            font-size: 1.8rem;
+            z-index: 100;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            animation: swingEnvelope 4s ease-in-out infinite;
+            cursor: pointer;
+        }
+
+        @keyframes swingEnvelope {
+            0%, 100% { transform: rotate(-8deg); }
+            50% { transform: rotate(8deg); }
+        }
+
+        /* Vật phẩm rơi dày đặc */
+        .falling-item {
+            position: absolute;
+            z-index: 5;
+            animation: fallItem linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes fallItem {
+            0% {
+                transform: translateY(-100px) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(600px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Thông tin ở dưới */
+        .info {
+            text-align: center;
+            padding: 25px;
+            margin-top: 30px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            backdrop-filter: blur(20px);
+            border: 3px solid rgba(255, 215, 0, 0.5);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 15px;
+        }
+
+        .stat-item {
+            font-size: 1.5rem;
+            color: #ffd700;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .stat-item i {
+            font-size: 2rem;
+        }
+
+        /* Nút âm nhạc nhỏ */
+        .music-control {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+
+        .music-btn {
+            background: rgba(255, 215, 0, 0.9);
+            color: #bc002d;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s;
+        }
+
+        .music-btn:hover {
+            transform: scale(1.1);
+            background: rgba(255, 215, 0, 1);
+        }
+
+        /* Responsive */
+        @media (max-width: 1400px) {
+            .cards-container {
+                grid-template-columns: repeat(7, 1fr);
+                grid-template-rows: repeat(8, 1fr);
+                gap: 10px;
+            }
+            
+            .big-money-amount {
+                font-size: 4.5rem;
+                padding: 20px 30px;
+            }
+            
+            .money-display-label {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .main-content {
+                flex-direction: column;
+                height: auto;
+                gap: 40px;
+            }
+            
+            .cards-container {
+                grid-template-columns: repeat(9, 1fr);
+                grid-template-rows: repeat(6, 1fr);
+                height: 60vh;
+            }
+            
+            .right-column {
+                height: 40vh;
+                order: 3;
+            }
+            
+            .money-display-container {
+                height: 90%;
+            }
+            
+            .title h1 {
+                font-size: 3rem;
+            }
+            
+            .title p {
+                font-size: 2rem;
+            }
+            
+            .big-money-amount {
+                font-size: 4rem;
+            }
+            
+            .money-display-label {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .cards-container {
+                grid-template-columns: repeat(6, 1fr);
+                grid-template-rows: repeat(9, 1fr);
+            }
+            
+            .title h1 {
+                font-size: 2.5rem;
+            }
+            
+            .title p {
+                font-size: 1.8rem;
+            }
+            
+            .stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .big-money-amount {
+                font-size: 3rem;
+                padding: 15px 20px;
+            }
+            
+            .money-display-label {
+                font-size: 1.5rem;
+                padding: 10px 20px;
+            }
+            
+            .gold-bar-effect {
+                font-size: 5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hình nền Tết -->
+    <div class="tet-background"></div>
+    
+    <!-- Canvas pháo hoa nền -->
+    <canvas id="backgroundFireworks"></canvas>
+    
+    <!-- Hiệu ứng thỏi vàng - THÊM MỚI -->
+    <div class="gold-bar-effect" id="goldBarEffect">🥇</div>
+    
+    <!-- Nút điều khiển âm nhạc -->
+    <div class="music-control">
+        <button id="musicToggle" class="music-btn">
+            <i class="fas fa-volume-up"></i>
+        </button>
+    </div>
+    
+    <!-- Audio cho nhạc Tết -->
+    <audio id="tetMusic" loop>
+        <source src="tet-music.mp3" type="audio/mpeg">
+        <source src="https://assets.mixkit.co/music/preview/mixkit-happy-new-year-2019-479.mp3" type="audio/mpeg">
+    </audio>
+    
+    <!-- Container chính -->
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="title">
+                <h1>🎉 CHÚC MỪNG NĂM MỚI 2026 🎉</h1>
+                <p>An Khang - Thịnh Vượng</p>
+            </div>
+        </div>
+        
+        <!-- Nội dung chính -->
+        <div class="main-content">
+            <!-- Cột bên trái - Cây đào -->
+            <div class="left-column">
+                <div class="tree-container">
+                    <div class="tree" id="peachTree">
+                        <!-- Cây đào SVG sẽ được chèn bằng JavaScript -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Cột giữa - 54 thẻ bài -->
+            <div class="center-column">
+                <div class="cards-container" id="cardsContainer">
+                    <!-- 54 thẻ bài sẽ được tạo bằng JavaScript -->
+                </div>
+            </div>
+            
+            <!-- Cột bên phải - Khung hiển thị tiền lớn - THÊM MỚI -->
+            <div class="right-column">
+                <div class="money-display-container">
+                    <div class="money-display-label">SỐ TIỀN NHẬN ĐƯỢC</div>
+                    <div class="big-money-amount" id="bigMoneyAmount">0 VND</div>
+                    <div class="money-display-label" style="font-size: 1.8rem; margin-top: 20px;">
+                        Chúc bạn năm mới<br>Phát Tài - Phát Lộc
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Thông tin -->
+        <div class="info">
+            <div class="stats">
+                <div class="stat-item">
+                    <i class="fas fa-horse-head"></i> 
+                    <span>Lì xì đã mở: <span id="openedCount">0</span>/54</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-money-bill-wave"></i> 
+                    <span>Tổng tiền: <span id="totalMoney">0</span> VND</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Lớp chính điều khiển ứng dụng
+        class Tet2026App {
+            constructor() {
+                this.cards = [];
+                this.totalMoney = 0;
+                this.openedCount = 0;
+                this.cardValues = this.generateCardValues(); // 54 thẻ theo cơ cấu mới
+                this.cardIcons = ['🐎', '🏇', '🎠', '🦄'];
+                this.isAnimating = false;
+                this.fallingItemsCount = 0;
+                this.fireworks = [];
+                
+                // DOM Elements
+                this.cardsContainer = document.getElementById('cardsContainer');
+                this.openedCountDisplay = document.getElementById('openedCount');
+                this.totalMoneyDisplay = document.getElementById('totalMoney');
+                this.bigMoneyAmount = document.getElementById('bigMoneyAmount');
+                this.goldBarEffect = document.getElementById('goldBarEffect');
+                this.musicToggle = document.getElementById('musicToggle');
+                this.tetMusic = document.getElementById('tetMusic');
+                this.peachTree = document.getElementById('peachTree');
+                this.canvas = document.getElementById('backgroundFireworks');
+                this.ctx = this.canvas.getContext('2d');
+                
+                // Khởi tạo
+                this.init();
+            }
+            
+            // Tạo giá trị cho 54 thẻ bài theo cơ cấu mới
+            generateCardValues() {
+                const values = [];
+                
+                // 6 x 5,000đ
+                for (let i = 0; i < 6; i++) values.push(5000);
+                
+                // 22 x 10,000đ
+                for (let i = 0; i < 22; i++) values.push(10000);
+                
+                // 20 x 20,000đ
+                for (let i = 0; i < 20; i++) values.push(20000);
+                
+                // 5 x 50,000đ
+                for (let i = 0; i < 5; i++) values.push(50000);
+                
+                // 1 x 100,000đ
+                values.push(100000);
+                
+                // Xáo trộn các giá trị
+                return this.shuffleArray(values);
+            }
+            
+            // Hàm xáo trộn mảng
+            shuffleArray(array) {
+                for (let i = array.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [array[i], array[j]] = [array[j], array[i]];
+                }
+                return array;
+            }
+            
+            init() {
+                // Thiết lập kích thước canvas
+                this.resizeCanvas();
+                window.addEventListener('resize', () => this.resizeCanvas());
+                
+                this.createCards();
+                this.createPeachTree();
+                this.startFallingItems();
+                this.startBackgroundFireworks();
+                this.setupMusic();
+                
+                // Bắt đầu vòng lặp animation
+                this.animate();
+            }
+            
+            resizeCanvas() {
+                this.canvas.width = window.innerWidth;
+                this.canvas.height = window.innerHeight;
+            }
+            
+            // Tạo 54 thẻ bài có số thứ tự
+            createCards() {
+                this.cardsContainer.innerHTML = '';
+                
+                for (let i = 0; i < 54; i++) {
+                    const card = document.createElement('div');
+                    card.className = 'card';
+                    card.dataset.index = i;
+                    card.dataset.value = this.cardValues[i];
+                    
+                    const randomIcon = this.cardIcons[Math.floor(Math.random() * this.cardIcons.length)];
+                    
+                    // Tạo số tiền hiển thị gọn gàng
+                    const moneyText = this.formatMoney(this.cardValues[i]);
+                    
+                    card.innerHTML = `
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="card-number">${i + 1}</div>
+                                <div class="horse-icon">${randomIcon}</div>
+                                <div class="card-text">TẾT 2026</div>
+                            </div>
+                            <div class="card-back">
+                                <div class="money-amount">${moneyText} VND</div>
+                            </div>
+                        </div>
+                    `;
+                    
+                    // Sự kiện click
+                    card.addEventListener('click', () => {
+                        if (!card.classList.contains('flipped') && !this.isAnimating) {
+                            this.flipCard(card, i);
+                        }
+                    });
+                    
+                    this.cardsContainer.appendChild(card);
+                    this.cards.push(card);
+                }
+            }
+            
+            // Lật thẻ bài với hiệu ứng thỏi vàng
+            flipCard(card, index) {
+                this.isAnimating = true;
+                
+                // Lật thẻ
+                card.classList.add('flipped');
+                
+                // Cập nhật thông tin
+                const value = parseInt(card.dataset.value);
+                
+                // Hiệu ứng thỏi vàng
+                this.showGoldBarEffect();
+                
+                setTimeout(() => {
+                    this.totalMoney += value;
+                    this.openedCount++;
+                    
+                    // Cập nhật số tiền lớn bên phải
+                    this.updateBigMoneyDisplay(value);
+                    
+                    this.totalMoneyDisplay.textContent = this.formatMoneySimple(this.totalMoney);
+                    this.openedCountDisplay.textContent = this.openedCount;
+                    
+                    // Pháo hoa
+                    this.createFirework(
+                        Math.random() * this.canvas.width,
+                        Math.random() * this.canvas.height / 2
+                    );
+                    
+                    // Thêm vật phẩm rơi
+                    this.createFallingItemFromTree();
+                    
+                    // Kiểm tra kết thúc
+                    if (this.openedCount >= 54) {
+                        setTimeout(() => this.showFinalCelebration(), 1500);
+                    }
+                    
+                    this.isAnimating = false;
+                }, 800);
+            }
+            
+            // Hiển thị hiệu ứng thỏi vàng - THÊM MỚI
+            showGoldBarEffect() {
+                this.goldBarEffect.classList.remove('gold-bar-animation');
+                void this.goldBarEffect.offsetWidth; // Trigger reflow
+                this.goldBarEffect.classList.add('gold-bar-animation');
+            }
+            
+            // Cập nhật số tiền lớn bên phải - THÊM MỚI
+            updateBigMoneyDisplay(value) {
+                const formattedValue = this.formatMoneySimple(value);
+                this.bigMoneyAmount.textContent = `${formattedValue} VND`;
+                
+                // Hiệu ứng nhấp nháy
+                this.bigMoneyAmount.style.animation = 'none';
+                void this.bigMoneyAmount.offsetWidth; // Trigger reflow
+                this.bigMoneyAmount.style.animation = 'money-glow 2s infinite alternate';
+            }
+            
+            // Tạo cây đào SVG đẹp
+            createPeachTree() {
+                const svgNS = "http://www.w3.org/2000/svg";
+                const svg = document.createElementNS(svgNS, "svg");
+                svg.setAttribute("width", "100%");
+                svg.setAttribute("height", "100%");
+                svg.setAttribute("viewBox", "0 0 500 700");
+                svg.classList.add("tree-svg");
+                
+                // Thân cây chính
+                const trunk = document.createElementNS(svgNS, "path");
+                trunk.setAttribute("d", "M250,650 C250,580 220,500 250,450 C280,400 220,350 250,300 C280,250 220,150 250,100");
+                trunk.setAttribute("fill", "#8B4513");
+                trunk.setAttribute("stroke", "#654321");
+                trunk.setAttribute("stroke-width", "4");
+                svg.appendChild(trunk);
+                
+                // Cành lớn bên trái
+                const leftBranch1 = document.createElementNS(svgNS, "path");
+                leftBranch1.setAttribute("d", "M250,450 Q180,400 140,350");
+                leftBranch1.setAttribute("fill", "none");
+                leftBranch1.setAttribute("stroke", "#8B4513");
+                leftBranch1.setAttribute("stroke-width", "20");
+                leftBranch1.setAttribute("stroke-linecap", "round");
+                svg.appendChild(leftBranch1);
+                
+                const leftBranch2 = document.createElementNS(svgNS, "path");
+                leftBranch2.setAttribute("d", "M250,350 Q200,300 170,250");
+                leftBranch2.setAttribute("fill", "none");
+                leftBranch2.setAttribute("stroke", "#8B4513");
+                leftBranch2.setAttribute("stroke-width", "15");
+                leftBranch2.setAttribute("stroke-linecap", "round");
+                svg.appendChild(leftBranch2);
+                
+                // Cành lớn bên phải
+                const rightBranch1 = document.createElementNS(svgNS, "path");
+                rightBranch1.setAttribute("d", "M250,450 Q320,400 360,350");
+                rightBranch1.setAttribute("fill", "none");
+                rightBranch1.setAttribute("stroke", "#8B4513");
+                rightBranch1.setAttribute("stroke-width", "20");
+                rightBranch1.setAttribute("stroke-linecap", "round");
+                svg.appendChild(rightBranch1);
+                
+                const rightBranch2 = document.createElementNS(svgNS, "path");
+                rightBranch2.setAttribute("d", "M250,350 Q300,300 330,250");
+                rightBranch2.setAttribute("fill", "none");
+                rightBranch2.setAttribute("stroke", "#8B4513");
+                rightBranch2.setAttribute("stroke-width", "15");
+                rightBranch2.setAttribute("stroke-linecap", "round");
+                svg.appendChild(rightBranch2);
+                
+                // Tạo nhiều hoa đào (màu hồng)
+                const peachBlossomColors = ['#FFB6C1', '#FF69B4', '#FF1493', '#DB7093'];
+                for (let i = 0; i < 60; i++) {
+                    const x = 100 + Math.random() * 300;
+                    const y = 150 + Math.random() * 400;
+                    
+                    const blossomGroup = document.createElementNS(svgNS, "g");
+                    blossomGroup.setAttribute("transform", `translate(${x}, ${y})`);
+                    
+                    // Cánh hoa (5 cánh)
+                    for (let j = 0; j < 5; j++) {
+                        const angle = (j * 72) * Math.PI / 180;
+                        const petal = document.createElementNS(svgNS, "ellipse");
+                        petal.setAttribute("rx", "8");
+                        petal.setAttribute("ry", "12");
+                        petal.setAttribute("transform", `rotate(${j * 72})`);
+                        petal.setAttribute("fill", peachBlossomColors[Math.floor(Math.random() * peachBlossomColors.length)]);
+                        petal.setAttribute("opacity", "0.9");
+                        blossomGroup.appendChild(petal);
+                    }
+                    
+                    // Nhụy hoa
+                    const center = document.createElementNS(svgNS, "circle");
+                    center.setAttribute("r", "5");
+                    center.setAttribute("fill", "#FFD700");
+                    blossomGroup.appendChild(center);
+                    
+                    svg.appendChild(blossomGroup);
+                }
+                
+                this.peachTree.innerHTML = '';
+                this.peachTree.appendChild(svg);
+                
+                // Thêm lì xì treo trên cây
+                this.createTreeEnvelopes();
+            }
+            
+            // Tạo lì xì treo trên cây
+            createTreeEnvelopes() {
+                const texts = ['PHÚC', 'LỘC', 'THỌ'];
+                
+                // Lì xì trên cây đào
+                for (let i = 0; i < 8; i++) {
+                    const envelope = document.createElement('div');
+                    envelope.className = 'tree-envelope';
+                    envelope.textContent = texts[Math.floor(Math.random() * texts.length)];
+                    
+                    // Đặt vị trí ngẫu nhiên trên cây
+                    envelope.style.left = `${15 + Math.random() * 70}%`;
+                    envelope.style.top = `${20 + Math.random() * 60}%`;
+                    envelope.style.animationDelay = `${Math.random() * 4}s`;
+                    
+                    this.peachTree.appendChild(envelope);
+                }
+            }
+            
+            // Vật phẩm rơi dày đặc từ cây
+            startFallingItems() {
+                setInterval(() => {
+                    this.createFallingItem(this.peachTree, ['🧧', '🪙', '💰', '🎁', '✨']);
+                }, 200);
+            }
+            
+            // Tạo vật phẩm rơi từ cây khi lật thẻ
+            createFallingItemFromTree() {
+                const items = ['🧧', '🪙', '💰', '🎁', '✨', '⭐', '🌟', '💫'];
+                
+                // Tạo nhiều vật phẩm cùng lúc
+                for (let i = 0; i < 5; i++) {
+                    setTimeout(() => {
+                        this.createFallingItem(this.peachTree, items);
+                    }, i * 100);
+                }
+            }
+            
+            createFallingItem(treeElement, items) {
+                const item = document.createElement('div');
+                item.className = 'falling-item';
+                item.textContent = items[Math.floor(Math.random() * items.length)];
+                
+                // Đặt vị trí ngẫu nhiên trên cây
+                const rect = treeElement.getBoundingClientRect();
+                const left = rect.left + Math.random() * rect.width;
+                
+                item.style.left = `${left}px`;
+                item.style.top = `${rect.top + 50}px`;
+                item.style.fontSize = `${1.5 + Math.random() * 2}rem`;
+                item.style.animationDuration = `${2 + Math.random() * 2}s`;
+                
+                document.body.appendChild(item);
+                
+                // Xóa sau khi rơi xong
+                setTimeout(() => {
+                    if (item.parentNode) {
+                        item.remove();
+                    }
+                }, 4000);
+            }
+            
+            // HỆ THỐNG PHÁO HOA
+            createFirework(x, y) {
+                const colors = ['#ff0000', '#00ff00', '#ffff00', '#ff00ff', '#00ffff', '#ff9500'];
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                
+                this.fireworks.push({
+                    x: x,
+                    y: y,
+                    particles: this.createParticles(x, y, color),
+                    createdAt: Date.now(),
+                    duration: 1800
+                });
+            }
+            
+            createParticles(x, y, color) {
+                const particles = [];
+                const count = 120;
+                
+                for (let i = 0; i < count; i++) {
+                    particles.push({
+                        x: x,
+                        y: y,
+                        vx: (Math.random() - 0.5) * 10,
+                        vy: (Math.random() - 0.5) * 10,
+                        radius: Math.random() * 3 + 1,
+                        color: color,
+                        life: 1.0,
+                        decay: 0.008 + Math.random() * 0.01,
+                        gravity: 0.06
+                    });
+                }
+                
+                return particles;
+            }
+            
+            // Vòng lặp animation cho pháo hoa
+            animate() {
+                // Xóa canvas với hiệu ứng fade nhẹ
+                this.ctx.fillStyle = 'rgba(139, 0, 0, 0.08)';
+                this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
+                
+                // Cập nhật và vẽ pháo hoa
+                for (let i = this.fireworks.length - 1; i >= 0; i--) {
+                    const firework = this.fireworks[i];
+                    const age = Date.now() - firework.createdAt;
+                    
+                    if (age > firework.duration) {
+                        this.fireworks.splice(i, 1);
+                        continue;
+                    }
+                    
+                    this.drawFirework(firework);
+                }
+                
+                requestAnimationFrame(() => this.animate());
+            }
+            
+            drawFirework(firework) {
+                firework.particles.forEach(particle => {
+                    // Cập nhật vị trí
+                    particle.x += particle.vx;
+                    particle.y += particle.vy + particle.gravity;
+                    particle.life -= particle.decay;
+                    
+                    if (particle.life > 0) {
+                        // Vẽ particle chính
+                        this.ctx.beginPath();
+                        this.ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
+                        this.ctx.fillStyle = `rgba(${this.hexToRgb(particle.color)}, ${particle.life})`;
+                        this.ctx.fill();
+                        
+                        // Hiệu ứng sáng xung quanh
+                        const gradient = this.ctx.createRadialGradient(
+                            particle.x, particle.y, 0,
+                            particle.x, particle.y, particle.radius * 3
+                        );
+                        gradient.addColorStop(0, `rgba(${this.hexToRgb(particle.color)}, ${particle.life * 0.4})`);
+                        gradient.addColorStop(1, 'transparent');
+                        
+                        this.ctx.beginPath();
+                        this.ctx.arc(particle.x, particle.y, particle.radius * 3, 0, Math.PI * 2);
+                        this.ctx.fillStyle = gradient;
+                        this.ctx.fill();
+                    }
+                });
+            }
+            
+            // Pháo hoa nền liên tục
+            startBackgroundFireworks() {
+                setInterval(() => {
+                    if (Math.random() > 0.4) {
+                        this.createFirework(
+                            Math.random() * this.canvas.width,
+                            Math.random() * this.canvas.height
+                        );
+                    }
+                }, 800);
+            }
+            
+            // Cài đặt nhạc Tết
+            setupMusic() {
+                // Tự động thử phát nhạc
+                const playMusic = () => {
+                    this.tetMusic.volume = 0.6;
+                    this.tetMusic.play().catch(e => {
+                        console.log("Đang chờ tương tác để phát nhạc...");
+                    });
+                };
+                
+                // Thử phát ngay
+                playMusic();
+                
+                // Phát khi có tương tác đầu tiên
+                document.addEventListener('click', () => {
+                    playMusic();
+                }, { once: true });
+                
+                // Nút điều khiển âm nhạc
+                this.musicToggle.addEventListener('click', () => {
+                    if (this.tetMusic.paused) {
+                        this.tetMusic.play();
+                        this.musicToggle.innerHTML = '<i class="fas fa-volume-up"></i>';
+                    } else {
+                        this.tetMusic.pause();
+                        this.musicToggle.innerHTML = '<i class="fas fa-volume-mute"></i>';
+                    }
+                });
+            }
+            
+            // Hiển thị màn hình kết thúc
+            showFinalCelebration() {
+                // Pháo hoa rực rỡ
+                for (let i = 0; i < 40; i++) {
+                    setTimeout(() => {
+                        this.createFirework(
+                            Math.random() * this.canvas.width,
+                            Math.random() * this.canvas.height
+                        );
+                    }, i * 80);
+                }
+                
+                // Hiển thị thông báo
+                setTimeout(() => {
+                    alert(`🎊 CHÚC MỪNG NĂM MỚI 2026 🎊\n\nTổng số tiền lì xì: ${this.formatMoneySimple(this.totalMoney)} VND\n\nChúc bạn một năm mới An Khang Thịnh Vượng, Vạn Sự Như Ý!`);
+                }, 3000);
+            }
+            
+            // Chuyển hex sang rgb
+            hexToRgb(hex) {
+                const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+                return result ? 
+                    `${parseInt(result[1], 16)}, ${parseInt(result[2], 16)}, ${parseInt(result[3], 16)}` : 
+                    '255, 255, 255';
+            }
+            
+            // Định dạng tiền HIỂN THỊ TRÊN THẺ
+            formatMoney(amount) {
+                return amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+            }
+            
+            // Định dạng tiền đơn giản cho tổng tiền
+            formatMoneySimple(amount) {
+                return amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+            }
+        }
+        
+        // Khởi chạy ứng dụng
+        document.addEventListener('DOMContentLoaded', () => {
+            const app = new Tet2026App();
+            window.tetApp = app;
+        });
+    </script>
+</body>
+</html>
